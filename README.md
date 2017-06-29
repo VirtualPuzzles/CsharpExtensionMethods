@@ -2,8 +2,10 @@
 
 .NET Framework class library exposing some C# extension methods (With a sub project performing unit tests)
 
+
 Types of objects available for extension methods so far:
 - List<T> (Where T is equatable)
+
 
 References:
 - [NUnit](https://github.com/nunit/docs/wiki) 3.7
