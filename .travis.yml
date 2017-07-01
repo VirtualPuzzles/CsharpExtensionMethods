@@ -1,2 +1,10 @@
 language: csharp
 solution: CsharpExtensionMethods.sln
+
+install:
+  - sudo apt-get install nunit-console
+  - nuget restore ./CsharpExtensionMethods.sln
+ 
+script:
+  - xbuild ./CsharpExtensionMethods.sln
+  - nunit-console ./CsharpExtensionsTests/bin/Debug/CsharpExtensionsTests.dll
