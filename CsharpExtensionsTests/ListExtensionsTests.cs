@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 using Shouldly;
 using CsharpExtension;
+using System;
 
-namespace CsharpExtensionsTests
+namespace CsharpExtensions.Tests
 {
     [TestFixture]
     public class ListExtensionsTests
     {
         [Test]
-        public void AreAllStringsEqualTest()
+        public void AreAllStringsEqualTestTrue()
         {
             new List<string> { "Test", "Test", "Test" }
             .AreAllEqual()
@@ -21,11 +18,18 @@ namespace CsharpExtensionsTests
         }
 
         [Test]
-        public void AreAllStringsEqualTest_Failes()
+        public void AreAllStringsEqualTestFalse()
         {
             new List<string> { "Test2", "Test", "Test" }
             .AreAllEqual()
             .ShouldBeFalse();
+        }
+
+        [Test]
+        public void Failed_AreAllEqualsTestOnNullList()
+        {
+            List<int> list = null;
+            var exception = Should.Throw<ArgumentNullException>(() => list.AreAllEqual());
         }
     }
 }

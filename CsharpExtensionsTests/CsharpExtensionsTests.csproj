@@ -7,8 +7,8 @@
     <ProjectGuid>{7F0233BE-2AC6-4797-83E7-FA7B99D7D658}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CsharpExtensionsTests</RootNamespace>
-    <AssemblyName>CsharpExtensionsTests</AssemblyName>
+    <RootNamespace>CsharpExtensions.Tests</RootNamespace>
+    <AssemblyName>CsharpExtensions.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ListExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CsharpExtensions\CsharpExtensions.csproj">
