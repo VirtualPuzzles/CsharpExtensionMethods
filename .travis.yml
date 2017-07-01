@@ -7,4 +7,4 @@ install:
  
 script:
   - xbuild ./CsharpExtensionMethods.sln
-  - nunit-console ./CsharpExtensionsTests/bin/Debug/CsharpExtensionsTests.dll
+  - nunit-console ./CsharpExtensionsTests/bin/Debug/CsharpExtensions.Tests.dll
