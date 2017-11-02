@@ -8,7 +8,5 @@ namespace CsharpExtension
     {
         public static bool AreAllEqual<T>(this List<T> list) where T : IEquatable<T>
             => list.GroupBy(o => o).Count() == 1;
-
-
     }
 }
