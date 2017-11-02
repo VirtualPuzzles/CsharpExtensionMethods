@@ -11,25 +11,25 @@ namespace CsharpExtensions.Tests
         [Test]
         public void IsNullOrWhiteSpaceTestOnEmpty()
         {
-            "".IsNullORWhiteSpace().ShouldBeTrue();
+            "".IsNullOrWhiteSpace().ShouldBeTrue();
         }
 
         [Test]
         public void IsNullOrWhiteSpaceTestOnSpace()
         {
-            " ".IsNullORWhiteSpace().ShouldBeTrue();
+            " ".IsNullOrWhiteSpace().ShouldBeTrue();
         }
 
         [Test]
         public void IsNullOrWhiteSpaceTestOnWord()
         {
-            "Test".IsNullORWhiteSpace().ShouldBeFalse();
+            "Test".IsNullOrWhiteSpace().ShouldBeFalse();
         }
 
         [Test]
         public void IsNullOrWhiteSpaceTestOnNull()
         {
-            ((string)null).IsNullORWhiteSpace().ShouldBeTrue();
+            ((string)null).IsNullOrWhiteSpace().ShouldBeTrue();
         }
 
         [Test]
@@ -53,7 +53,7 @@ namespace CsharpExtensions.Tests
         [Test]
         public void IsNullOrEmptyTestOnNull()
         {
-            ((string)null).IsNullORWhiteSpace().ShouldBeTrue();
+            ((string)null).IsNullOrWhiteSpace().ShouldBeTrue();
         }
     }
 }
