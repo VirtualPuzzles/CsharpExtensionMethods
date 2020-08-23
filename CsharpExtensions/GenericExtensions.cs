@@ -2,7 +2,7 @@
 {
     public static partial class Extensions
     {
-        public static bool IsNull<T>(this T obj) where T : class
-        => obj == null;
+        public static bool IsNull<TSource>(this TSource obj)
+            => obj == null;
     }
 }

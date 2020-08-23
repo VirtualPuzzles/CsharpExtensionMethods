@@ -8,23 +8,30 @@ namespace CsharpExtensions.Tests
     public class GenericExtensionsTests
     {
         [Test]
-        public void IsObjectNullTestWithNotNullObject()
+        public void IsNull_NotNullObject()
         {
             var testObj = new TestClass();
             testObj.IsNull().ShouldBeFalse();
         }
 
         [Test]
-        public void IsObjectNullTestWithNullObject()
+        public void IsNull_NullObject()
         {
             TestClass testObj = null;
             testObj.IsNull().ShouldBeTrue();
         }
 
         [Test]
-        public void IsObjectNullTestWithUnsetObject()
+        public void IsNull_NotNullStruct()
         {
-            TestClass testObj = null;
+            int? testObj = 15;
+            testObj.IsNull().ShouldBeFalse();
+        }
+
+        [Test]
+        public void IsNull_NullStruct()
+        {
+            int? testObj = null;
             testObj.IsNull().ShouldBeTrue();
         }
     }

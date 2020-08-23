@@ -7,51 +7,23 @@ namespace CsharpExtensions.Tests
     public class StringExtensionsTests
     {
         [Test]
-        public void IsNullOrWhiteSpaceTestOnEmpty()
+        [TestCase(true, "")]
+        [TestCase(true, " ")]
+        [TestCase(false, "Test")]
+        [TestCase(true, null)]
+        public void IsNullOrWhiteSpaceTest(bool expectation, string s)
         {
-            "".IsNullOrWhiteSpace().ShouldBeTrue();
+            s.IsNullOrWhiteSpace().ShouldBe(expectation);
         }
 
         [Test]
-        public void IsNullOrWhiteSpaceTestOnSpace()
+        [TestCase(true, "")]
+        [TestCase(false, " ")]
+        [TestCase(false, "Test")]
+        [TestCase(true, null)]
+        public void IsNullOrEmptyTestOnEmpty(bool expectation, string s)
         {
-            " ".IsNullOrWhiteSpace().ShouldBeTrue();
-        }
-
-        [Test]
-        public void IsNullOrWhiteSpaceTestOnWord()
-        {
-            "Test".IsNullOrWhiteSpace().ShouldBeFalse();
-        }
-
-        [Test]
-        public void IsNullOrWhiteSpaceTestOnNull()
-        {
-            ((string)null).IsNullOrWhiteSpace().ShouldBeTrue();
-        }
-
-        [Test]
-        public void IsNullOrEmptyTestOnEmpty()
-        {
-            "".IsNullOrEmpty().ShouldBeTrue();
-        }
-
-        [Test]
-        public void IsNullOrEmptyTestOnSpace()
-        {
-            " ".IsNullOrEmpty().ShouldBeFalse();
-        }
-
-        [Test]
-        public void IsNullOrEmptyTestOnWord()
-        {
-            "Test".IsNullOrEmpty().ShouldBeFalse();
-        }
-
-        [Test]
-        public void IsNullOrEmptyTestOnNull()
-        {
-            ((string)null).IsNullOrWhiteSpace().ShouldBeTrue();
+            s.IsNullOrEmpty().ShouldBe(expectation);
         }
     }
 }

@@ -12,4 +12,17 @@ namespace CsharpExtensions.Tests.mocks
         public DateTime? DateValue { get; set; }
         public int? IntValue { get; set; }
     }
+
+    internal class EquatableClass : IEquatable<EquatableClass>
+    {
+        public int ID { get; set; }
+
+        public bool Equals(EquatableClass other)
+        {
+            if (other == null)
+                return false;
+
+            return ID == other.ID;
+        }
+    }
 }
