@@ -16,6 +16,7 @@ namespace CsharpExtensions.Tests.mocks
     internal class EquatableClass : IEquatable<EquatableClass>
     {
         public int ID { get; set; }
+        public bool? Nullable { get; set; }
 
         public bool Equals(EquatableClass other)
         {

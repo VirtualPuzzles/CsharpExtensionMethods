@@ -3,10 +3,10 @@ using Shouldly;
 
 namespace CsharpExtensions.Tests
 {
-    [TestFixture]
+    [TestFixture, Parallelizable]
     public class StringExtensionsTests
     {
-        [Test]
+        [Test, Parallelizable]
         [TestCase(true, "")]
         [TestCase(true, " ")]
         [TestCase(false, "Test")]
@@ -16,7 +16,7 @@ namespace CsharpExtensions.Tests
             s.IsNullOrWhiteSpace().ShouldBe(expectation);
         }
 
-        [Test]
+        [Test, Parallelizable]
         [TestCase(true, "")]
         [TestCase(false, " ")]
         [TestCase(false, "Test")]

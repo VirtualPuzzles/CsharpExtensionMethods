@@ -8,16 +8,16 @@ using CsharpExtensions.Tests.mocks;
 
 namespace CsharpExtensions.Tests
 {
-    [TestFixture]
+    [TestFixture, Parallelizable]
     public class IEnumerableExtensionsTests
     {
-        [Test]
+        [Test, Parallelizable]
         public void AreAllEqualTest_NullRefException()
         {
             Should.Throw<ArgumentNullException>(() => ((List<string>)null).AreAllEqual());
         }
 
-        [Test]
+        [Test, Parallelizable]
         [TestCase(true, "Test", "Test", "Test")]
         [TestCase(false, "Test2", "Test", "Test")]
         [TestCase(false, null, "Test", "Test")]
@@ -30,7 +30,7 @@ namespace CsharpExtensions.Tests
             values?.AreAllEqual().ShouldBe(expectation);
         }
 
-        [Test]
+        [Test, Parallelizable]
         [TestCase(true, 15, 15, 15)]
         [TestCase(false, 15, 15, 16)]
         [TestCase(true, 15)]
@@ -39,7 +39,7 @@ namespace CsharpExtensions.Tests
             values.AreAllEqual().ShouldBe(expectation);
         }
         
-        [Test]
+        [Test, Parallelizable]
         public void AreAllEqualTest_EqualClasses()
         {
             var list = new List<EquatableClass>
@@ -51,7 +51,7 @@ namespace CsharpExtensions.Tests
             list.AreAllEqual().ShouldBeTrue();
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void AreAllEqualTest_NotEqualClasses()
         {
             var list = new List<EquatableClass>
@@ -63,7 +63,7 @@ namespace CsharpExtensions.Tests
             list.AreAllEqual().ShouldBeFalse();
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void AreAllEqualTest_EqualClassesWithNull()
         {
             var list = new List<EquatableClass>
@@ -76,7 +76,7 @@ namespace CsharpExtensions.Tests
             list.AreAllEqual().ShouldBeFalse();
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void AreAllEqualTest_NotEqualClassesWithNull()
         {
             var list = new List<EquatableClass>
@@ -89,7 +89,7 @@ namespace CsharpExtensions.Tests
             list.AreAllEqual().ShouldBeFalse();
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void AreAllEqualTest_EqualClassesWithFirstItemNull()
         {
             var list = new List<EquatableClass>
@@ -102,7 +102,7 @@ namespace CsharpExtensions.Tests
             list.AreAllEqual().ShouldBeFalse();
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void AreAllEqualTest_NotEqualClassesWithFirstItemNull()
         {
             var list = new List<EquatableClass>
@@ -111,6 +111,8 @@ namespace CsharpExtensions.Tests
                 new EquatableClass { ID = 1 },
                 new EquatableClass { ID = 2 }
             };
+
+            if (list[0]?.Nullable ?? false)
 
             list.AreAllEqual().ShouldBeFalse();
         }
