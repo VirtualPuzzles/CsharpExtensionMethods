@@ -4,31 +4,31 @@ using Shouldly;
 
 namespace CsharpExtensions.Tests
 {
-    [TestFixture, Parallelizable]
+    [TestFixture]
     public class GenericExtensionsTests
     {
-        [Test, Parallelizable]
+        [Test]
         public void IsNull_NotNullObject()
         {
             var testObj = new TestClass();
             testObj.IsNull().ShouldBeFalse();
         }
 
-        [Test, Parallelizable]
+        [Test]
         public void IsNull_NullObject()
         {
             TestClass testObj = null;
             testObj.IsNull().ShouldBeTrue();
         }
 
-        [Test, Parallelizable]
+        [Test]
         public void IsNull_NotNullStruct()
         {
             int? testObj = 15;
             testObj.IsNull().ShouldBeFalse();
         }
 
-        [Test, Parallelizable]
+        [Test]
         public void IsNull_NullStruct()
         {
             int? testObj = null;
