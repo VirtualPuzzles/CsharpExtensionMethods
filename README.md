@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ludwigdn/CsharpExtensionMethods.svg?branch=master)](https://travis-ci.org/ludwigdn/CsharpExtensionMethods)
+[![Actions Status](https://github.com/ludwigdn/CsharpExtensionMethods/workflows/.NET%20Core/badge.svg)](https://github.com/ludwigdn/CsharpExtensionMethods/actions)
 # CsharpExtensionMethods
 .NET Framework class library exposing some C# extension methods (With a sub project performing unit tests)
 ## Types of objects available for extension methods so far:
