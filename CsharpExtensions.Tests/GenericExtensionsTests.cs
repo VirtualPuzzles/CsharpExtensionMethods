@@ -1,38 +1,37 @@
 ﻿using CsharpExtensions.Tests.mocks;
 using NUnit.Framework;
-using Shouldly;
 
 namespace CsharpExtensions.Tests
 {
-    [TestFixture]
+    [TestFixture, Parallelizable]
     public class GenericExtensionsTests
     {
-        [Test]
+        [Test, Parallelizable]
         public void IsNull_NotNullObject()
         {
             var testObj = new TestClass();
-            testObj.IsNull().ShouldBeFalse();
+            Assert.IsFalse(testObj.IsNull());
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void IsNull_NullObject()
         {
             TestClass testObj = null;
-            testObj.IsNull().ShouldBeTrue();
+            Assert.IsTrue(testObj.IsNull());
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void IsNull_NotNullStruct()
         {
             int? testObj = 15;
-            testObj.IsNull().ShouldBeFalse();
+            Assert.IsFalse(testObj.IsNull());
         }
 
-        [Test]
+        [Test, Parallelizable]
         public void IsNull_NullStruct()
         {
             int? testObj = null;
-            testObj.IsNull().ShouldBeTrue();
+            Assert.IsTrue(testObj.IsNull());
         }
     }
 }

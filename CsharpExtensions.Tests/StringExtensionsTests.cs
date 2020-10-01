@@ -1,29 +1,28 @@
 ﻿using NUnit.Framework;
-using Shouldly;
 
 namespace CsharpExtensions.Tests
 {
-    [TestFixture]
-    public class StringExtensionsTests
+    [TestFixture, Parallelizable]
+    public class StringExtensionsTest
     {
-        [Test]
+        [Test, Parallelizable]
         [TestCase(true, "")]
         [TestCase(true, " ")]
         [TestCase(false, "Test")]
         [TestCase(true, null)]
         public void IsNullOrWhiteSpaceTest(bool expectation, string s)
         {
-            s.IsNullOrWhiteSpace().ShouldBe(expectation);
+            Assert.AreEqual(s.IsNullOrWhiteSpace(), expectation);
         }
 
-        [Test]
+        [Test, Parallelizable]
         [TestCase(true, "")]
         [TestCase(false, " ")]
         [TestCase(false, "Test")]
         [TestCase(true, null)]
         public void IsNullOrEmptyTestOnEmpty(bool expectation, string s)
         {
-            s.IsNullOrEmpty().ShouldBe(expectation);
+            Assert.AreEqual(s.IsNullOrEmpty(), expectation);
         }
     }
 }
