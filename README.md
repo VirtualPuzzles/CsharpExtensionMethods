@@ -6,4 +6,3 @@
 - String
 ## Packages used:
 - [NUnit](https://github.com/nunit/docs/wiki)
-- [Shouldly](https://github.com/shouldly/shouldly)
