@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>CsharpExtensions</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>ludwigdn</Authors>
+    <Company>ludwigdn</Company>
+    <PackageDescription>.NET 5 library exposing useful C# extension methods</PackageDescription>
+    <RepositoryUrl>https://github.com/ludwigdn/CsharpExtensions</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
