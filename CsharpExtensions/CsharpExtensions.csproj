@@ -8,6 +8,7 @@
     <Company>ludwigdn</Company>
     <PackageDescription>.NET 5 library exposing useful C# extension methods</PackageDescription>
     <RepositoryUrl>https://github.com/ludwigdn/CsharpExtensions</RepositoryUrl>
+    <PackageTags>.NET;.NET5;Core;C#;Extension;Productivity</PackageTags>
   </PropertyGroup>
 
 </Project>
