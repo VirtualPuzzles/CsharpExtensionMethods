@@ -1,7 +1,7 @@
-﻿using CsharpExtensions.Tests.mocks;
+﻿using DotnetExtensions.Tests.mocks;
 using NUnit.Framework;
 
-namespace CsharpExtensions.Tests
+namespace DotnetExtensions.Tests
 {
     [TestFixture, Parallelizable]
     public class GenericExtensionsTests

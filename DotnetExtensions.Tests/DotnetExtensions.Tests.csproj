@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CsharpExtensions\CsharpExtensions.csproj" />
+    <ProjectReference Include="..\DotnetExtensions.CSharp\DotnetExtensions.CSharp.csproj" />
   </ItemGroup>
 
 </Project>

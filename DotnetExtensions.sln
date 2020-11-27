@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpExtensions", "CsharpExtensions\CsharpExtensions.csproj", "{4108A6EB-8750-48FC-9628-60058D181D90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetExtensions.CSharp", "DotnetExtensions.CSharp\DotnetExtensions.CSharp.csproj", "{4108A6EB-8750-48FC-9628-60058D181D90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpExtensions.Tests", "CsharpExtensions.Tests\CsharpExtensions.Tests.csproj", "{7F0233BE-2AC6-4797-83E7-FA7B99D7D658}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetExtensions.Tests", "DotnetExtensions.Tests\DotnetExtensions.Tests.csproj", "{7F0233BE-2AC6-4797-83E7-FA7B99D7D658}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4108A6EB-8750-48FC-9628-60058D181D90} = {4108A6EB-8750-48FC-9628-60058D181D90}
 	EndProjectSection

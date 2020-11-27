@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CsharpExtensions
+namespace DotnetExtensions
 {
     public static partial class Extensions
     {

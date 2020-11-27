@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageId>DotnetExtensions.CSharp</PackageId>
+    <Version>1.1.2</Version>
+    <Authors>ludwigdn</Authors>
+    <Company>ludwigdn</Company>
+    <PackageDescription>.NET 5 library exposing useful extension methods</PackageDescription>
+    <RepositoryUrl>https://github.com/ludwigdn/DotnetExtensions</RepositoryUrl>
+    <PackageTags>.NET;.NET5;Core;C#;Extension;Productivity</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>

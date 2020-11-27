@@ -1,4 +1,4 @@
-﻿namespace CsharpExtensions
+﻿namespace DotnetExtensions
 {
     public static partial class Extensions
     {

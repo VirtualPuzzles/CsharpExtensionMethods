@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System;
 using NUnit.Framework;
-using CsharpExtensions.Tests.mocks;
+using DotnetExtensions.Tests.mocks;
 
-namespace CsharpExtensions.Tests
+namespace DotnetExtensions.Tests
 {
     [TestFixture, Parallelizable]
     public class IEnumerableExtensionsTests

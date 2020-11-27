@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace CsharpExtensions.Tests
+namespace DotnetExtensions.Tests
 {
     [TestFixture, Parallelizable]
     public class StringExtensionsTest
